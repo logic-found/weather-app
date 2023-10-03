@@ -10,15 +10,16 @@ import rain_img from '../Assets/rain.png';
 import snow_img from '../Assets/snow.png';
 import strom_img from '../Assets/storm.png';
 import haze_img from '../Assets/haze.png';
+//require('react-dotenv').config();
 
 export default function Weather() {
   
   const [weather, setWeather] = useState({
     city: "Delhi",
-    temperature: "23",
+    temperature: "23°C",
     weather_type: "Sunny",
-    wind_speed: "",
-    humidity: "",
+    wind_speed: "0 km/hr",
+    humidity: "0 %",
     weather_img: clear_img,
   });
   const [inputCity,setInputCity] = useState('')

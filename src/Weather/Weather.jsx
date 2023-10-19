@@ -10,7 +10,6 @@ import rain_img from '../Assets/rain.png';
 import snow_img from '../Assets/snow.png';
 import strom_img from '../Assets/storm.png';
 import haze_img from '../Assets/haze.png';
-//require('react-dotenv').config();
 
 export default function Weather() {
   

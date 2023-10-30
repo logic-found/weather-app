@@ -21,7 +21,7 @@ export default function Weather() {
     humidity: "0 %",
     weather_img: clear_img,
   });
-  const [inputCity,setInputCity] = useState('')
+  const [inputCity,setInputCity] = useState(null)
   const dummyBgImgUrl = "https://imgs.search.brave.com/Bq1saXqOoS_O2riF3d7LgBu_g7fD_KD1RRat1J3-QAQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NzU1NjY2NjgyMDAt/N2RjYWE3YjJjZjI4/P2l4bGliPXJiLTQu/MC4zJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4T1h4/OFpHVnNhR2w4Wlc1/OE1IeDhNSHg4ZkRB/PSZ3PTEwMDAmcT04/MA"
   const [bgImg, setBgImg] = useState(`url(${dummyBgImgUrl})`)
   
@@ -35,7 +35,7 @@ export default function Weather() {
   },[])
 
   async function FetchDataFromApi(){
-    const city = (inputCity=='')? 'Delhi':inputCity
+    const city = (inputCity==null || !isNaN(inputCity) || inputCity.length==0)? 'Delhi':inputCity
     const API_key = process.env.REACT_APP_WEATHER_API_KEY;
     const Base_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=Metric&appid=${API_key}`
     
@@ -70,7 +70,7 @@ export default function Weather() {
   }
   async function changeBgImg(){
     try {
-      const city = (inputCity=='')? 'delhi':inputCity
+      const city = (inputCity==null || !isNaN(inputCity) || inputCity.length==0)? 'delhi':inputCity
       const API_KEY = process.env.REACT_APP_UNSPLASH_API_KEY; 
       const Base_url = `https://api.unsplash.com/photos/random?query=${city}&client_id=${API_KEY}`
       const response = await axios.get(Base_url);

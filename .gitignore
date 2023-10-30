@@ -5,7 +5,7 @@
 /scripts
 /.pnp
 .pnp.js
-
+.env
 # testing
 /coverage
 

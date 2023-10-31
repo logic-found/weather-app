@@ -1,3 +1,10 @@
+<img width="958" alt="image" src="https://github.com/logic-found/weather-appp/assets/93260606/ec3232d4-2aa6-4c6a-8e38-a488b4f40738">
+
+<img width="957" alt="image" src="https://github.com/logic-found/weather-appp/assets/93260606/5db47a7a-31ea-4f38-a4ac-e0b8d6b71b00">
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
